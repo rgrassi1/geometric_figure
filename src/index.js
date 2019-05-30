@@ -6,9 +6,10 @@ const GeometricForm = props => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        width: props.width || 200,  
+        width: props.width || 200,
+        height: props.width || 200,
         background: props.background || "#444",
-        borderRadius: props.radius || 0
+        borderRadius: props.radius || '50%'
     }
     const text = {
         fontSize: "1.5rem",
@@ -18,7 +19,7 @@ const GeometricForm = props => {
     return (
         <div style={container}>
             <p style={text}>
-                {props.text}
+                {props.children || 'Círculo'}
             </p>
         </div>
     )
